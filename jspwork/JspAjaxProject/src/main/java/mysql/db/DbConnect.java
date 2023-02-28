@@ -31,7 +31,7 @@ public class DbConnect {
 			conn=DriverManager.getConnection(MYSQL_URL, "root", "1234");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
-			System.out.println("오라클 연결 실패: "+e.getMessage());
+			System.out.println("Mysql 연결 실패: "+e.getMessage());
 		}
 		
 		return conn;

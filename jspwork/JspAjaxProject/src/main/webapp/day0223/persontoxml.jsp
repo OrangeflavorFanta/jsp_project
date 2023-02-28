@@ -4,9 +4,8 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="mysql.db.DbConnect"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    
+<%@ page language="java" contentType="text/xml; charset=utf-8"
+    pageEncoding="utf-8"%>
 <data>
 <%
 	DbConnect db=new DbConnect();
@@ -17,29 +16,31 @@
 	String sql="select * from person order by num";
 	
 	try{
-		pstmt=conn.prepareStatement(sql);
-		rs=pstmt.executeQuery();
+	pstmt=conn.prepareStatement(sql);
+	rs=pstmt.executeQuery();
+	
+	while(rs.next())
+	{
+		String num=rs.getString("num");
+		String name=rs.getString("name");
+		int age=rs.getInt("age");
+		String hp=rs.getString("hp");
+		%>
 		
-		while(rs.next()){
-			String num=rs.getString("num");
-			String name=rs.getString("name");
-			int age=rs.getInt("age");
-			String hp=rs.getString("hp");
-			%>
-			
-			<person num="<%=num%>">
-			<name><%=name%></name>
-			<age><%=age %></age>
-			<hp><%=hp %></hp>
-			</person>
-			
-		<%}
+		<person num="<%=num%>">
+		   <name><%=name %></name>
+		   <age><%=age %></age>
+		   <hp><%=hp %></hp>
+		</person>
 		
+	<%}
+	
+	
 	}catch(SQLException e){
 		
 	}finally{
 		db.dbClose(rs, pstmt, conn);
 		
-	}	
+	}
 %>
 </data>

@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <board>
-	<data id="garlic" namw="장환라">
-		<subject>Hello</subject>
-		<photo>../image/10.png</photo>
-	</data>
-
-	<data id="aaa" namw="미미">
-		<subject>제주도 출신</subject>
-		<photo>../image/09.png</photo>
-	</data>
-
-	<data id="bbb" namw="비니">
-		<subject>춘천출신</subject>
-		<photo>../image/08.png</photo>
-	</data>
-
-	<data id="ccc" namw="효정">
-		<subject>얘는 모르겠다</subject>
-		<photo>../image/07.png</photo>
-	</data>
-
-	<data id="ddd" namw="승희">
-		<subject>춘천 출신</subject>
-		<photo>../image/06.png</photo>
-	</data>
+    <data id="angel" name="이미현">
+        <subject>Hello</subject>
+        <photo>../image/10.png</photo>
+    </data>
+    <data id="aaa" name="이효리">
+        <subject>여긴제주야</subject>
+        <photo>../image/01.png</photo>
+    </data>
+    <data id="bbb" name="이상순">
+        <subject>여기는 서울입니다</subject>
+        <photo>../image/05.png</photo>
+    </data>
+    <data id="ccc" name="성시경">
+        <subject>좋은밤되세요</subject>
+        <photo>../image/08.png</photo>
+    </data>
+    <data id="ddd" name="이진">
+        <subject>여긴뉴욕</subject>
+        <photo>../image/09.png</photo>
+    </data>
 </board>

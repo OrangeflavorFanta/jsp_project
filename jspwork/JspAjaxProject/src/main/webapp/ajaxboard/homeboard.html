@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Edu+VIC+WA+NT+Beginner:wght@600&family=Gamja+Flower&family=Single+Day&family=Jua&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+<style type="text/css">
+
+  div.list,div.detail{
+  	position: absolute;
+  	left: 100px;
+  	top: 100px;
+  	font-size: 13pt;
+  	font-family: 'Single Day';
+  
+  }
+
+
+div.writeform{
+	position: absolute;
+  	left: 900px;
+  	top: 100px;
+  	font-size: 13pt;
+  	font-family: 'Single Day';
+}
+</style>
+
+<script type="text/javascript">
+
+$(function(){
+	
+	list();
+	
+	//입력폼 처음에 안보이게
+	$("div.writeform").hide();
+	//글쓰기 버튼 누르면 입력폼 나오게
+	$("#btnwrite").click(function(){
+		$("div.writeform").toggle();
+	});
+	//db추가
+	$("#btnadd").click(function(){
+		
+		var writer=$("#writer").val();
+		var subject=$("#subject").val();
+		var avata=$("#avata").val();
+		var content=$("#content").val();
+		
+		//var data="writer="+writer+"&subject="+subject+"&content="+content+"&avata="+avata; 방법1
+		
+		//console.log(writer,subject,content,avata);
+		
+		$.ajax({
+			
+			type:"post",
+			dataType:"html",
+			url:"insertboardproc.jsp",
+			data:{"writer":writer,"subject":subject,"content":content,"avata":avata}, //방법2
+			success:function(){
+				
+				
+				//insert성공시 처리
+				$("#writer").val("");
+				$("#subject").val("");
+				$("#content").val("");
+				
+				//alert("success");
+				//다시출력
+				list();
+				
+				//입력폼 사라지게
+				$("div.writeform").hide();
+			}
+			
+		});
+	});
+	
+	//제목 클릭시 내용보기 이벤트
+	$(document).on("click","span.detail",function(){
+		
+		//span태그에 넣어둔 num
+		var num=$(this).attr("num");
+		//alert(num);
+		
+		$.jax({
+			type:"get",
+			dataType:"json",
+			data:{"num":num},
+			url:"detailboard.jsp",
+			success:function(){
+				//alert("success");
+			}
+		})
+		
+	})
+	
+});
+
+
+
+//사용자함수 list
+
+function list()
+{
+	$.ajax({
+		
+		type:"get",
+		dataType:"json",
+		url:"listproc.jsp",
+		success:function(data){
+			
+			//alert(data.length);
+			
+			//제목출력
+			var s="<table class='table table-bordered' style='width:700px;'>";
+			s+="<caption><b>Ajax게시판</b></caption>";
+			s+="<tr bgcolor='#ccf'>";
+			s+="<th width='60'>번호</th>";
+			s+="<th width='360'>제목</th>";
+			s+="<th width='120'>작성자</th>";
+			s+="<th width='160'>작성일</th>";
+			s+="<tr>";
+			
+			if(data.length==0){
+				s+="<tr>";
+				s+="<td colspan='4' align='center'>";
+				s+="<b>저장된 글이 없습니다</b>";
+				s+="</td></tr>";
+			}else{
+				//데이터가 1개이상 있을때
+				$.each(data,function(i,item){
+					
+					s+="<tr>";
+					s+="<td align='center'>"+(i+1)+"</td>";
+					s+="<td>";
+					s+="<span num='"+item.num+"' class='detail'>"+item.subject+"</span>";
+					s+="</td>";
+					s+="<td>"+item.writer+"</td>";
+					s+="<td>"+item.writeday+"</td>";
+				});
+			}
+			
+			
+			s+="</table>";
+			$("#board").html(s);
+			
+		}
+	});
+}
+
+</script>
+</head>
+<body>
+  <div>
+     <button type="button" class="btn btn-info" id="btnwrite">글쓰기</button>
+     <div id="board">list</div>
+     <div id="detail">detail</div>
+  </div>
+  
+  <div class="writeform">
+       <form action="#" >
+          <table class="table table-bordered" style="width: 400px;">
+             <caption><b>게시글 추가</b></caption>
+               <tr>
+                 <th bgcolor="#fcc">작성자</th>
+                   <td>
+                     <input type="text" id="writer" style="width: 120px;"
+                     class="form-control">
+                   </td>
+               </tr>
+               
+               <tr>
+                 <th bgcolor="#fcc">제목</th>
+                   <td>
+                     <input type="text" id="subject" style="width: 220px;"
+                     class="form-control">
+                   </td>
+               </tr>
+               
+               <tr>
+                 <th bgcolor="#fcc">이미지</th>
+                   <td>
+                     <select id="avata" class="form-control">
+                       <option value="../image/01.png">미니1</option>
+                       <option value="../image/02.png">미니2</option>
+                       <option value="../image/03.png">미니3</option>
+                       <option value="../image/04.png">미니4</option>
+                       <option value="../image/05.png">미니5</option>
+                     </select>
+                   </td>
+               </tr>
+               
+               <tr>
+                 <td colspan="2" align="center">
+                   <textarea style="width: 300px; height: 100px;"
+                   id="content" class="form-control"></textarea>
+                 </td>
+               </tr>
+               
+               <tr>
+                 <td colspan="2" align="center">
+                   <button type="button" class="btn btn-danger"
+                   id="btnadd">DB추가</button>
+                 </td>
+               </tr>
+          </table>
+       </form>
+  </div>
+  
+</body>
+</html>

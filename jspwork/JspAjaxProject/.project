@@ -3,6 +3,8 @@
 	<name>JspAjaxProject</name>
 	<comment></comment>
 	<projects>
+		<project>json_simple</project>
+		<project>mysql-connector-j-8.0.32</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
