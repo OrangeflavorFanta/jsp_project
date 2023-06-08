@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="mysql.db.DbConnect"><rhs name\="mysql.db.DbConnect"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.Vector"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.Vector"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.Vector"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="data.Dto.MemberDto"><rhs name\="data.Dto.MemberDto"/></lhs><lhs name\="data.Dto.AnswerDto"><rhs name\="data.Dto.AnswerDto"/></lhs><lhs name\="data.Dto.smartDto"><rhs name\="data.Dto.smartDto"/></lhs><lhs name\="data.Dto.SmartAnswerDto"><rhs name\="data.Dto.SmartAnswerDto"/></lhs><lhs name\="data.Dto.ShopDto"><rhs name\="data.Dto.ShopDto"/></lhs><lhs name\="java.util.Map"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.util.AbstractMap"><rhs name\="java.util.HashMap"/></lhs><lhs name\="java.util.HashMap"><rhs name\="java.util.HashMap"/></lhs></history>
+content_assist_number_of_computers=17
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

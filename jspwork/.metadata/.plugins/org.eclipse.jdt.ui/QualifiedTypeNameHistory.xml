@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
+    <fullyQualifiedTypeName name="org.eclipse.jdt.internal.compiler.ast.ReturnStatement"/>
+    <fullyQualifiedTypeName name="java.security.Timestamp"/>
+    <fullyQualifiedTypeName name="data.Dto.MemberDto"/>
+    <fullyQualifiedTypeName name="data.Dao.GuestDao"/>
+    <fullyQualifiedTypeName name="data.Dto.GuestDto"/>
+    <fullyQualifiedTypeName name="data.Dto.AnswerDto"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="data.Dao.SmartAnswerDao"/>
+    <fullyQualifiedTypeName name="data.Dto.smartDto"/>
+    <fullyQualifiedTypeName name="data.Dto.SmartAnswerDto"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="mysql.db.DbConnect"/>
+    <fullyQualifiedTypeName name="data.Dto.ShopDto"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+</qualifiedTypeNameHistroy>

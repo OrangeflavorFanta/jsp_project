@@ -1,0 +1,17 @@
+127.0.0.1 - - [23/Mar/2023:17:29:53 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /jspMiniProject/index.jsp HTTP/1.1" 200 7535
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /jspMiniProject/js/function.js HTTP/1.1" 404 844
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /jspMiniProject/js/jquery.js HTTP/1.1" 404 842
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /jspMiniProject/menu/css/menu.css HTTP/1.1" 200 3760
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /jspMiniProject/menu/css/font-awesome.css HTTP/1.1" 200 15825
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /image/banner-01.png HTTP/1.1" 404 830
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /image/banner-02.png HTTP/1.1" 404 830
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /image/banner-03.png HTTP/1.1" 404 830
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:54 +0900] "GET /image/banner-04.png HTTP/1.1" 404 830
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:55 +0900] "GET /jspMiniProject/menu/images/patterns/light_toast.png HTTP/1.1" 404 874
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:55 +0900] "GET /jspMiniProject/menu/images/plus-gray.png HTTP/1.1" 200 1015
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:55 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:56 +0900] "GET /jspMiniProject/index.jsp?main=login/loginmain.jsp HTTP/1.1" 200 8666
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:56 +0900] "GET /jspMiniProject/js/function.js HTTP/1.1" 404 844
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:56 +0900] "GET /jspMiniProject/js/jquery.js HTTP/1.1" 404 842
+0:0:0:0:0:0:0:1 - - [23/Mar/2023:17:29:56 +0900] "GET /jspMiniProject/menu/images/patterns/light_toast.png HTTP/1.1" 404 874
